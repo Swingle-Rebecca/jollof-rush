@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Jollof Rush</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<canvas id="scene"></canvas>
+
+<!-- start.ng profile card: the player's character -->
+<div class="startng-card" id="player-card" hidden>
+  <img id="player-face" alt="">
+  <div>
+    <b id="player-name"></b>
+    <span id="player-account"></span>
+  </div>
+  <button id="player-sign-in" hidden>Sign in</button>
+</div>
+
+<div id="stats" hidden>
+  <div><small>SCORE</small><b id="score">0</b></div>
+  <div><small>TIME</small><b id="time">2:00</b></div>
+</div>
+<div id="orders" hidden></div>
+<div id="holding" hidden></div>
+<div id="prompt" hidden></div>
+<div id="toast"></div>
+
+<div id="stick" hidden><div id="knob"></div></div>
+<button id="act" hidden>ACT</button>
+
+<div class="overlay" id="title">
+  <div class="panel">
+    <h1>Jollof Rush</h1>
+    <p class="tag">Cook. Plate. Serve. Before the customers walk out.</p>
+    <ul class="how">
+      <li><b>Move</b> WASD / arrows (or the stick)</li>
+      <li><b>Do things</b> E / Space (or ACT)</li>
+      <li><span>🍛 Jollof</span> rice + chopped tomato in the pot</li>
+      <li><span>🍗 Chicken</span> fry it in the pan</li>
+      <li>Grab a plate, put the food on it, serve at the window. Don't let it burn!</li>
+    </ul>
+    <button id="start" class="big">Start cooking</button>
+  </div>
+</div>
+
+<div class="overlay" id="over" hidden>
+  <div class="panel">
+    <h1>Shift over!</h1>
+    <div class="result"><div><small>SCORE</small><b id="r-score">0</b></div><div><small>DISHES</small><b id="r-dishes">0</b></div></div>
+    <p id="save-msg" class="tag"></p>
+    <h3>Leaderboard</h3>
+    <ol id="board"></ol>
+    <div class="row">
+      <button id="again" class="big">Cook again</button>
+      <button id="over-sign-in" class="ghost" hidden>Sign in to save</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="./game.js"></script>
+</body>
+</html>
